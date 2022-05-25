@@ -1,6 +1,4 @@
 
-$vers = Read-Host -Prompt "Enter VSCode Version"
-
 ## ------------------------------ ##
 ## Create Build Folder
 ## ------------------------------ ##
@@ -30,20 +28,20 @@ New-Item -Path "$PSScriptRoot" -Name "temp" -ItemType "directory" | Out-Null
 ## Copy Inputs into Temp Folder
 ## ------------------------------ ##
 
-$installcmd = 'start /w "" "%~dp0VSCodeSetup-x64-' + $vers + '.exe" /verysilent /norestart /mergetasks=!runcode'
+$installcmd = 'start /w "" "%~dp0logioptionsplus_installer.exe" /quiet /flow No /update No /sso No /analytics No'
 $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
 [System.IO.File]::WriteAllLines("$PSScriptRoot\temp\Install.cmd", $installcmd, $Utf8NoBomEncoding)
 
-$uninstallcmd = '"C:\Program Files\Microsoft VS Code\unins000.exe" /verysilent /norestart'
+$uninstallcmd = 'start /w "" "%~dp0logioptionsplus_installer.exe" /uninstall'
 $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
 [System.IO.File]::WriteAllLines("$PSScriptRoot\temp\Uninstall.cmd", $uninstallcmd, $Utf8NoBomEncoding)
 
 ## ------------------------------ ##
-## Download VSCode
+## Download Logitech Options Plus
 ## ------------------------------ ##
 
-$url = "https://update.code.visualstudio.com/$vers/win32-x64/stable"
-$filepath = "$temppath\VSCodeSetup-x64-$vers.exe"
+$url = "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.exe"
+$filepath = "$temppath\logioptionsplus_installer.exe"
 
 $wc = New-Object System.Net.WebClient
 $wc.DownloadFile($url, $filepath)
@@ -51,7 +49,7 @@ $wc.DownloadFile($url, $filepath)
 ## ------------------------------ ##
 ## Build the Intunewin File
 ## ------------------------------ ##
-$Testpath = "$buildpath\VSCodeSetup-x64-$vers.intunewin"
+$Testpath = "$buildpath\logioptionsplus_installer.intunewin"
 if (Test-Path $Testpath) {
     Remove-Item $Testpath
 }
