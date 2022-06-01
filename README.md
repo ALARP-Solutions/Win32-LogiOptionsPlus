@@ -11,10 +11,10 @@
 | Field | Data |
 | --- | --- |
 | Name | Logitech Options+ |
-| Description | TBA |
+| Description | Logi Options+ is a next-gen app that lets you manage and customize your supported mice and keyboards —so they all seamlessly work towards your goals. Combining the best features of Options with a brand new easy-to-use interface, Options+ is designed to transform your daily tasks. |
 | Publisher | Logitech |
-| Information URL | TBA |
-| Privacy URL | TBA |
+| Information URL | https://www.logitech.com/en-au/software/logi-options-plus.html |
+| Privacy URL | https://www.logitech.com/en-au/legal/web-privacy-policy.html |
 | Category | Utilities & Tools |
 | Logo | See Icon.png |
 
