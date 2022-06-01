@@ -2,7 +2,7 @@
   <a href="https://github.com/ALARP-Solutions/WIN32-VSCODE">
     <img src="Icon.png" alt="Logo" width="80" height="80">
   </a>
-  <h1>Win32 Builder - Logitech Options Plus</h1>
+  <h1>Win32 Builder - Logi Options+</h1>
 </div>
 
 ## Configuring VSCode
@@ -10,7 +10,7 @@
 ### App Information
 | Field | Data |
 | --- | --- |
-| Name | Logitech Options+ |
+| Name | Logi Options+ |
 | Description | Logi Options+ is a next-gen app that lets you manage and customize your supported mice and keyboards —so they all seamlessly work towards your goals. Combining the best features of Options with a brand new easy-to-use interface, Options+ is designed to transform your daily tasks. |
 | Publisher | Logitech |
 | Information URL | https://www.logitech.com/en-au/software/logi-options-plus.html |
